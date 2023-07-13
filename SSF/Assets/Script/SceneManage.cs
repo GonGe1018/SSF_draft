@@ -5,7 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class SceneManage : MonoBehaviour
 {
-   public void clickStart()
+    private void Awake()
+    {
+    }
+
+    private void Update()
+    {
+        Screen.SetResolution(480, 854, false);
+    }
+    public void clickStart()
    {
         SceneManager.LoadScene("GameScene");
    }
