@@ -7,7 +7,8 @@ public class UiManager : MonoBehaviour
     public Text CatHP;
     public Text MouseHP;
 
-    public CatController CatController;
+    public CatController CatController1;
+    public CatController CatController2;
     public MouseController MouseController;
 
     // Update is called once per frame
@@ -18,7 +19,7 @@ public class UiManager : MonoBehaviour
 
     void HpUpdate ()
     {
-        CatHP.text = "고양이 HP : " + CatController.HP.ToString();
+        CatHP.text = "고양이 HP : " + CatController1.HP.ToString()+" "+CatController2.HP.ToString();
         MouseHP.text = "쥐 HP : " + MouseController.HP.ToString();   
     }
 }

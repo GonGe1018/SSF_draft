@@ -5,7 +5,11 @@ using UnityEngine;
 
 public class CatController : MonoBehaviour
 {
-    public int HP = 100;
+    public int HP = 30;
+    public bool isDied=false;
+
+    public int firstDir = 1;
+    public float changeDirTime;
 
     int moveDir = 1;
 
@@ -22,14 +26,19 @@ public class CatController : MonoBehaviour
 
     private void Update()
     {
-        transform.Translate(Vector3.right*moveDir*Time.deltaTime);
+        transform.Translate(Vector3.right*moveDir*firstDir*Time.deltaTime);
+        if(HP<=0) { 
+            isDied = true;
+            gameObject.SetActive(false);
+        }
+
     }
 
     IEnumerator MoveDirection()
     {
         while (true)
         {
-            yield return new WaitForSeconds(6f);
+            yield return new WaitForSeconds(changeDirTime);
             moveDir *= -1;
         }
     }

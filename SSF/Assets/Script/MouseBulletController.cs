@@ -8,7 +8,7 @@ public class MouseBulletController : MonoBehaviour
     void Awake()
     {
         rigidbody = GetComponent<Rigidbody2D>();
-        rigidbody.AddForce(transform.up*3f);
+        rigidbody.AddForce(transform.up*500f);
         StartCoroutine(objectDestroy());
     }
 
@@ -16,5 +16,13 @@ public class MouseBulletController : MonoBehaviour
     {
         yield return new WaitForSeconds(3.0f);
         Destroy(gameObject);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.CompareTag("Enemy"))
+        {
+            collision.gameObject.GetComponent<CatController>().HP -= 1;
+        }
     }
 }

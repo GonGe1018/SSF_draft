@@ -14,4 +14,10 @@ public class SceneManage : MonoBehaviour
     { 
         Application.Quit();
     }
+    
+    public void clickMenu()
+    {
+        SceneManager.LoadScene("MenuScene");
+    }
+
 }
