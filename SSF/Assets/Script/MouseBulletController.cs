@@ -11,13 +11,11 @@ public class MouseBulletController : MonoBehaviour
         rigidbody.AddForce(transform.up*500f);
         StartCoroutine(objectDestroy());
     }
-
     IEnumerator objectDestroy()
     {
         yield return new WaitForSeconds(3.0f);
         Destroy(gameObject);
     }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.CompareTag("Enemy"))

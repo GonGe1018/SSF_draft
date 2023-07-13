@@ -11,7 +11,7 @@ public class SceneManage : MonoBehaviour
 
     private void Update()
     {
-        Screen.SetResolution(480, 854, false);
+        
     }
     public void clickStart()
    {
