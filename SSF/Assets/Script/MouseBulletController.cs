@@ -21,6 +21,7 @@ public class MouseBulletController : MonoBehaviour
         if(collision.CompareTag("Enemy"))
         {
             collision.gameObject.GetComponent<CatController>().HP -= 1;
+            Destroy(gameObject);
         }
     }
 }
