@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d2d718e1a9a593446a9b294d65c9a938
+guid: cfbefb9d888d1ec4dba05f8a150f3332
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,7 +105,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Untitled_07-17-2023_10-42-50_4_0
+      name: Button_0
       rect:
         serializedVersion: 2
         x: 280
@@ -119,14 +119,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 10d914224e5da924a985367fffc6134b
-      internalID: 32300924
+      spriteID: 27a6d438199937f4dbbd931138e53efe
+      internalID: 1425983673
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Untitled_07-17-2023_10-42-50_4_1
+      name: Button_1
       rect:
         serializedVersion: 2
         x: 32
@@ -140,14 +140,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a81a63aebcd14394eabb54a2e83e9df4
-      internalID: -1922886575
+      spriteID: 96b3aa208c57e4045aa3c429f4b6198b
+      internalID: -469222429
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Untitled_07-17-2023_10-42-50_4_2
+      name: Button_2
       rect:
         serializedVersion: 2
         x: 24
@@ -161,14 +161,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b3e844760787ea245902c4b5badae66f
-      internalID: 141593205
+      spriteID: c3af1c4312e844240b310614de0139ec
+      internalID: 567908424
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Untitled_07-17-2023_10-42-50_4_3
+      name: Button_3
       rect:
         serializedVersion: 2
         x: 40
@@ -182,8 +182,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d9db5caa954834a48bf34e68717c55f8
-      internalID: 1849152559
+      spriteID: 9d51d1e9c84fab3438eba0720a5ae8b5
+      internalID: 1853551454
       vertices: []
       indices: 
       edges: []
@@ -199,10 +199,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Untitled_07-17-2023_10-42-50_4_0: 32300924
-      Untitled_07-17-2023_10-42-50_4_1: -1922886575
-      Untitled_07-17-2023_10-42-50_4_2: 141593205
-      Untitled_07-17-2023_10-42-50_4_3: 1849152559
+      Button_0: 1425983673
+      Button_1: -469222429
+      Button_2: 567908424
+      Button_3: 1853551454
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

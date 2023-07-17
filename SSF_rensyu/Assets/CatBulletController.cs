@@ -7,12 +7,24 @@ public class CatBulletController : MonoBehaviour
 
     void Start()
     {
-        StartCoroutine(objectDestroy());//발사 후 총알이 삭제 되도록함
+        StartCoroutine(objectDestroy());
     }
 
     IEnumerator objectDestroy()
     {
-        yield return new WaitForSeconds(3.0f);//3초 동안 기다림
-        Destroy(gameObject);//게임오브젝트(총알)을 삭제함
+        yield return new WaitForSeconds(3.0f);
+        Destroy(gameObject);
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    //만약 Collider의 Triger충돌이 있었다면
+    {
+        if (collision.CompareTag("Player"))
+        //충돌한 대상의 태그가 Player라면
+        {
+            collision.GetComponent<PlayerController>().HP -= 1;
+            //충돌한 대상의 체력을 1 낮춤
+            Destroy(gameObject);
+            //총알을 삭제함
+        }
     }
 }

@@ -20,7 +20,7 @@ public class CatController : MonoBehaviour
     void Start()
     {
         StartCoroutine(MoveDirection());
-        StartCoroutine(shootBullet());//총알 발사 코루틴 시작
+        StartCoroutine(shot());//총알 발사 코루틴 시작
     }
 
     // Update is called once per frame
@@ -42,7 +42,7 @@ public class CatController : MonoBehaviour
             moveDir *= -1;
         }
     }
-    IEnumerator shootBullet()
+    IEnumerator shot()
     {
         float RandTime = Random.RandomRange
             (shotTimeMin, shotTimeMax);//랜덤한 대기 시간을 산출
