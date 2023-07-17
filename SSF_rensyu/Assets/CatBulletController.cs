@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CatBulletController : MonoBehaviour
 {
+
     void Start()
     {
         StartCoroutine(objectDestroy());//발사 후 총알이 삭제 되도록함

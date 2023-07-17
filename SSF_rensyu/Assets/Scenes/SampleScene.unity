@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 110759980}
   - component: {fileID: 110759979}
+  - component: {fileID: 110759982}
   - component: {fileID: 110759981}
   m_Layer: 0
   m_Name: Cat
@@ -220,8 +221,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9142c38d32da43c4aa86722693b77623, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HP: 30
+  isDied: 0
   firstDir: 1
   changeDirTime: 6
+  bullet: {fileID: 678799234415739067, guid: cf9561298cd68e34fa3cc0e99d544eac, type: 3}
+--- !u!61 &110759982
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 110759978}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.029698491, y: -0.048755348}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.3307941, y: 0.83957946}
+  m_EdgeRadius: 0
 --- !u!1 &499369203
 GameObject:
   m_ObjectHideFlags: 0
@@ -514,7 +544,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5a0d0fd3001a414a93346fe827fbe60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HP: 30
+  isDied: 0
   speed: 3
+  bullet: {fileID: 8931551145658501173, guid: 03c94cf3568c72c448795a711e25bda2, type: 3}
 --- !u!1 &2053457197
 GameObject:
   m_ObjectHideFlags: 0

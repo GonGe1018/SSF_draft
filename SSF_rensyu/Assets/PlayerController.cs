@@ -47,7 +47,7 @@ public class PlayerController : MonoBehaviour
         while(true)//무한 반복
         {
             Instantiate(bullet, gameObject.transform.position,
-                gameObject.transform.rotation);//총알 복사
+                gameObject.transform.rotation);//총알 복제
             yield return new WaitForSeconds(0.3f);//0.3초 대기
         }
     }
