@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class MouseController : MonoBehaviour
 {
-    public Rigidbody2D rigidbody;
     public GameObject bullet;
 
     public int HP = 30;
