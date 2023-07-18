@@ -5,23 +5,22 @@ using UnityEngine.UI;
 
 public class UiManger : MonoBehaviour
 {
-    public Text CatHP;//CatHP 텍스트
-    public Text PlayerHP;//PlayerHP 텍스트
+    public Text CatHP;
+    public Text PlayerHP;
 
-    //HP 정보를 받아오기 위한 선언
+    //죽음 여부를 알기 위한 선언
     public CatController catController1;
     public CatController catController2;
     public PlayerController playerController;
 
-    bool gameOver = false;
-    public GameObject winPanel;
-    public GameObject losePanel;
-
+    bool gameOver = false;//게임오버 여부
+    public GameObject winPanel;//승리 패널 
+    public GameObject losePanel;//패배 패널
 
     void Update()
     {
         HpUpdate();
-        overCheck();
+        overCheck();//게임오버 체크 함수
     }
 
     void HpUpdate()
@@ -34,16 +33,19 @@ public class UiManger : MonoBehaviour
 
     void overCheck()
     {
-        if (catController1.isDied && catController2.isDied && !gameOver)
+        if(!gameOver)//게임이 끝나지 않았다면
         {
-            gameOver = true;
-            winPanel.SetActive(true);
+            if (catController1.isDied && catController2.isDied)
+            //고양이 두 마리가 다 죽었다면
+            {
+                gameOver = true;//게임오버 체크
+                winPanel.SetActive(true);//승리패널 활성화
+            }
+            if (playerController.isDied)
+            {
+                gameOver = true;//게임오버 체크
+                losePanel.SetActive(true);//패배패널 활성화
+            }
         }
-        if (playerController .isDied && !gameOver)
-        {
-            gameOver = true;
-            losePanel.SetActive(true);
-        }
-
     }
 }
