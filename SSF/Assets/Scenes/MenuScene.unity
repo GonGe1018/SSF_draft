@@ -294,8 +294,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1025570744}
-  - component: {fileID: 1025570743}
   - component: {fileID: 1025570745}
+  - component: {fileID: 1025570746}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -303,18 +303,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1025570743
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1025570742}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c4ea72e86d947be4994738e70d999969, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1025570744
 Transform:
   m_ObjectHideFlags: 0
@@ -340,6 +328,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9b96e7ab8877f7e4d98f6a0cb46fa306, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1025570746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1025570742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84cd9b877e0d5f14c8cba10b8929738b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1107885341
@@ -425,8 +425,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1025570743}
-        m_TargetAssemblyTypeName: SceneManage, Assembly-CSharp
+      - m_Target: {fileID: 1025570746}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: clickStart
         m_Mode: 1
         m_Arguments:
@@ -558,8 +558,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1025570743}
-        m_TargetAssemblyTypeName: SceneManage, Assembly-CSharp
+      - m_Target: {fileID: 1025570746}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: clickExit
         m_Mode: 1
         m_Arguments:

@@ -11,9 +11,15 @@ public class UiManager : MonoBehaviour
     public CatController CatController1;
     public CatController CatController2;
     public MouseController MouseController;
+
+    bool gameOver = false;
+    public GameObject winPanel;
+    public GameObject losePanel;
+
     void Update()
     {
         HpUpdate();//HPupdate함수를 매 프레임마다 작동
+        overCheck();
     }
 
     void HpUpdate ()
@@ -22,5 +28,19 @@ public class UiManager : MonoBehaviour
             " "+CatController2.HP.ToString();
         MouseHP.text = "쥐 HP : " + MouseController.HP.ToString(); 
         
+    }
+
+    void overCheck()
+    {
+        if (CatController1.isDied && CatController2.isDied && !gameOver)
+        {
+            gameOver = true;
+            winPanel.SetActive(true);
+        }
+        if (MouseController.isDied && !gameOver)
+        {
+            gameOver = true;
+            losePanel.SetActive(true);
+        }
     }
 }

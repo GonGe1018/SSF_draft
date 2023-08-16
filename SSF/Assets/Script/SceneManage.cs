@@ -5,14 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneManage : MonoBehaviour
 {
-    private void Awake()
-    {
-    }
-
-    private void Update()
-    {
-        
-    }
+    
     public void clickStart()
    {
         SceneManager.LoadScene("GameScene");

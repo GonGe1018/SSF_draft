@@ -1,29 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    bool gameOver =false;
-    public GameObject winPanel;
-    public GameObject losePanel;
-
-    public CatController cat1;
-    public CatController cat2;
-
-    public MouseController mouse;
-
-    private void Update()
+    public void clickStart()
     {
-        if (cat1.isDied && cat2.isDied&&!gameOver)
-        {
-            gameOver = true;
-            winPanel.SetActive(true);
-        }
-        if (mouse.isDied && !gameOver)
-        {
-            gameOver = true;
-            losePanel.SetActive(true);
-        }
+        SceneManager.LoadScene("GameScene");
+        //게임씬 로드
+    }
+    public void clickExit()
+    {
+        Application.Quit();
+        //애플리케이션 종료
+    }
+    public void clickMenu()
+    {
+        SceneManager.LoadScene("MenuScene");
+        //메뉴씬 로드
     }
 }

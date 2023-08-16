@@ -145,7 +145,6 @@ GameObject:
   - component: {fileID: 310960565}
   - component: {fileID: 310960564}
   - component: {fileID: 310960567}
-  - component: {fileID: 310960566}
   - component: {fileID: 310960568}
   m_Layer: 0
   m_Name: GameManager
@@ -171,6 +170,8 @@ MonoBehaviour:
   CatController1: {fileID: 1278484}
   CatController2: {fileID: 1293374650}
   MouseController: {fileID: 648583418}
+  winPanel: {fileID: 1424485493}
+  losePanel: {fileID: 564197469}
 --- !u!4 &310960565
 Transform:
   m_ObjectHideFlags: 0
@@ -186,18 +187,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &310960566
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 310960563}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c4ea72e86d947be4994738e70d999969, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &310960567
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -210,11 +199,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84cd9b877e0d5f14c8cba10b8929738b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  winPanel: {fileID: 1424485493}
-  losePanel: {fileID: 564197469}
-  cat1: {fileID: 1278484}
-  cat2: {fileID: 1293374650}
-  mouse: {fileID: 648583418}
 --- !u!114 &310960568
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -378,8 +362,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 310960566}
-        m_TargetAssemblyTypeName: SceneManage, Assembly-CSharp
+      - m_Target: {fileID: 310960567}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: clickStart
         m_Mode: 1
         m_Arguments:
@@ -1036,8 +1020,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 310960566}
-        m_TargetAssemblyTypeName: SceneManage, Assembly-CSharp
+      - m_Target: {fileID: 310960567}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: clickMenu
         m_Mode: 1
         m_Arguments:
@@ -1169,8 +1153,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 310960566}
-        m_TargetAssemblyTypeName: SceneManage, Assembly-CSharp
+      - m_Target: {fileID: 310960567}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: clickStart
         m_Mode: 1
         m_Arguments:
@@ -1423,7 +1407,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1424485494
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1875,8 +1859,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 310960566}
-        m_TargetAssemblyTypeName: SceneManage, Assembly-CSharp
+      - m_Target: {fileID: 310960567}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: clickMenu
         m_Mode: 1
         m_Arguments:
