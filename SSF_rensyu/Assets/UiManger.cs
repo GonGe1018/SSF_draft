@@ -33,7 +33,7 @@ public class UiManger : MonoBehaviour
 
     void overCheck()
     {
-        if(!gameOver)//게임이 끝나지 않았다면
+        if(!gameOver)//게임이 끝났다면
         {
             if (catController1.isDied && catController2.isDied)
             //고양이 두 마리가 다 죽었다면

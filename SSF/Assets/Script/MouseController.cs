@@ -10,9 +10,11 @@ public class MouseController : MonoBehaviour
     public bool isDied = false;
 
     public float speed = 3f;
+
     Vector2 MoveDir = Vector2.zero;
     float Horinzontal;
     float Vertical;
+
 
     // Start is called before the first frame update
     void Awake()
@@ -50,4 +52,8 @@ public class MouseController : MonoBehaviour
             yield return new WaitForSeconds(0.3f);
         }
     }
+
+
+    // Update is called once per frame
+   
 }
